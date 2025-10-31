@@ -4,6 +4,6 @@ A simple HTTP/HTTPS requester wriiten in Go. Just download the prebuilt binaries
 
 git clone github.com/adeel26in/goreq
 
-cd goreq
+cd goreq/src
 
 go build # or if you don't wanan build a binary yourself just run go run .
