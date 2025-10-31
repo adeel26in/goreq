@@ -6,4 +6,4 @@ git clone github.com/adeel26in/goreq
 
 cd goreq/src
 
-go build # or if you don't wanan build a binary yourself just run go run .
+go build # or if you don't wanan build a binary just run go run .
