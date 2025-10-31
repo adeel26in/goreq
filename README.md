@@ -2,7 +2,7 @@ Goreq
 
 A simple HTTP/HTTPS requester wriiten in Go. Download the prebuilt binaries or if you wanna build from source (Recommended for Windows and MacOS users as no prebuilt binaries are available for them):
 
-git clone github.com/adeel26in/goreq](https://github.com/adeel26in/goreq.git
+git clone https://github.com/adeel26in/goreq.git
 
 cd goreq/src
 
