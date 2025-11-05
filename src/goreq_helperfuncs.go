@@ -19,6 +19,7 @@ func http_request_get() {
 	if err != nil {
 
 		fmt.Println("Error initiating GET request", err)
+		return
 	}
 
 	defer get_response.Body.Close()
@@ -28,6 +29,7 @@ func http_request_get() {
 	if err != nil {
 
 		fmt.Println("Couldn't read the response body", err)
+		return
 	}
 
 	fmt.Println(string(formatted_body))
@@ -47,6 +49,7 @@ func http_request_head() {
 	if err != nil {
 
 		fmt.Println("Error initiating HEAD request", err)
+		return
 	}
 
 	defer get_response.Body.Close()
@@ -56,6 +59,7 @@ func http_request_head() {
 	if err != nil {
 
 		fmt.Println("Couldn't read the response body", err)
+		return
 	}
 
 	fmt.Println(string(formatted_body))
@@ -77,6 +81,7 @@ func http_request_post() {
 	if err != nil {
 
 		fmt.Println("Error initiating POST request", err)
+		return
 	}
 
 	defer get_response.Body.Close()
@@ -86,6 +91,7 @@ func http_request_post() {
 	if err != nil {
 
 		fmt.Println("Couldn't read the response body", err)
+		return
 	}
 
 	fmt.Println(string(formatted_body))
