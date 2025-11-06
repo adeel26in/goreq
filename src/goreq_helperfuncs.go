@@ -11,7 +11,6 @@ func http_request_get() {
 	var url_for_get_request string
 
 	fmt.Print("What URL/API would you like to do a GET request to?: ")
-
 	fmt.Scanln(&url_for_get_request)
 
 	get_response, err := http.Get(url_for_get_request)
@@ -20,6 +19,10 @@ func http_request_get() {
 
 		fmt.Println("Error initiating GET request", err)
 		return
+	}
+
+	if get_response.StatusCode != 200 {
+		fmt.Println("GET request not successful", get_response.Status)
 	}
 
 	defer get_response.Body.Close()
@@ -31,7 +34,6 @@ func http_request_get() {
 		fmt.Println("Couldn't read the response body", err)
 		return
 	}
-
 	fmt.Println(string(formatted_body))
 
 }
@@ -50,6 +52,10 @@ func http_request_head() {
 
 		fmt.Println("Error initiating HEAD request", err)
 		return
+	}
+
+	if get_response.StatusCode != 200 {
+		fmt.Println("HEAD request not successful", get_response.Status)
 	}
 
 	defer get_response.Body.Close()
@@ -82,6 +88,10 @@ func http_request_post() {
 
 		fmt.Println("Error initiating POST request", err)
 		return
+	}
+
+	if get_response.StatusCode != 200 {
+		fmt.Println("POST request not successful", get_response.Status)
 	}
 
 	defer get_response.Body.Close()
